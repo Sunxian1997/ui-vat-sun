@@ -1,28 +1,33 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!-- @input="(val) => (value = val) -->
+    <!-- <DatePicker v-model="now"></DatePicker> -->
+    <vat-date-picker v-model="now"></vat-date-picker>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+// import DatePicker from './components/date-picker'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    // DatePicker
+  },
+  data () {
+    return {
+      now: new Date()
+    }
   }
 }
 </script>
 
 <style>
-#app {
+/* #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-}
+} */
 </style>
