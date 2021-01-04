@@ -1,13 +1,14 @@
 {
   "name": "ui-vat-sun",
-  "version": "1.0.2",
-  "description": "发布日期组件(添加组件样式）",
+  "version": "1.0.8",
+  "description": "添加radio和radio-group组件",
   "main": "ui-vat-sun.umd.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "vue",
+    "ui",
     "html",
     "JavaScript"
   ],

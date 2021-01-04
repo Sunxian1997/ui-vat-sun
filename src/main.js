@@ -2,8 +2,15 @@ import Vue from 'vue'
 import App from './App.vue'
 import UiVatSun from 'ui-vat-sun'
 import 'ui-vat-sun/style/ui-vat-sun.css'
+import '../src/fonts/iconfont.css'
+// 全局注册人组件
+import VatRadio from './components/radio.vue'
 Vue.use(UiVatSun)
+Vue.component(VatRadio.name, VatRadio)
 Vue.config.productionTip = false
+
+// 全局注册组件
+
 Vue.directive('clickOutside', {
   bind (el, bindings, vnode) {
     // 吧事件绑定给document 看一下点击的是否是当前元素的内部
