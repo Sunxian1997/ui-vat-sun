@@ -16,9 +16,11 @@
       :disabled="disabled"
       :value="value"
       @input="inputHandle"
+      :maxlength="maxlength"
+      :minlength="minlength"
     />
     <span class="vat-input_suffix" v-if="clearable || showPassword">
-      <i class="vat-icon-close" v-if="clearable && value" @click="clear"></i>
+      <i class="iconfont icon-guanbi" v-if="clearable && value" @click="clear"></i>
       <i
         class="vat-icon-locking"
         :class="{
@@ -41,7 +43,7 @@ export default {
     },
     placeholder: {
       type: String,
-      default: ''
+      default: '请输入'
     },
     type: {
       type: String,
@@ -62,6 +64,14 @@ export default {
     showPassword: {
       type: Boolean,
       default: false
+    },
+    maxlength: {
+      type: Number,
+      default: ()=>10
+    },
+    minlength: {
+      type: Number,
+      default: ()=>10
     }
   },
   data () {
