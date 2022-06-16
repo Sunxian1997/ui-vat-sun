@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-11-03 17:16:28
- * @LastEditTime: 2021-11-09 10:13:25
+ * @LastEditTime: 2021-11-09 15:24:21
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \ui-vat-sun\src\views\components\input\index.vue
@@ -18,7 +18,7 @@
       <h3>基础用法</h3>
       <foldable-card>
         <div slot="componentSlot">
-          <vat-input v-model="input"></vat-input>
+          <vat-input v-model="normalValue"></vat-input>
         </div>
         <div slot="codeSlot">
           &lt;vat-input v-model="input" placeholder="请输入内容"/&gt;
@@ -30,7 +30,7 @@
       <h3>禁用状态</h3>
       <foldable-card>
         <div slot="componentSlot">
-          <vat-input v-model="input" disabled></vat-input>
+          <vat-input v-model="disabledInput" disabled></vat-input>
         </div>
         <div slot="codeSlot">
           &lt;vat-input v-model="input" disabled placeholder="请输入内容"/&gt;
@@ -42,7 +42,7 @@
       <h3>可清空</h3>
       <foldable-card>
         <div slot="componentSlot">
-          <vat-input v-model="input" clearable></vat-input>
+          <vat-input v-model="clearableInput" clearable></vat-input>
         </div>
         <div slot="codeSlot">
           &lt;vat-input v-model="input" clearable placeholder="请输入内容"/&gt;
@@ -54,7 +54,7 @@
       <h3>密码框</h3>
       <foldable-card>
         <div slot="componentSlot">
-          <vat-input v-model="input" type='password'></vat-input>
+          <vat-input v-model="passwordInput" type='password'></vat-input>
         </div>
         <div slot="codeSlot">
           &lt;vat-input v-model="input" type='password' placeholder="请输入内容"/&gt;
@@ -80,7 +80,10 @@
       },
       data(){
          return {
-            input:'',
+            normalValue:'',
+            disabledInput:'',
+            clearableInput:'',
+            passwordInput:'',
             data:[
               {
                 parameter:'type',
@@ -130,6 +133,13 @@
                 type:'boolean',
                 optionalValue:'—',
                 defaultValue:'false',
+              },
+              {
+                parameter:'name',
+                explain:'原生属性',
+                type:'string',
+                optionalValue:'—',
+                defaultValue:'—',
               }
             ],
             header:[
@@ -154,9 +164,11 @@
                 label:'默认值',
               },
             ],
-         }
+        }
       },
       computed:{
+      },
+      created(){
       }
    }
 </script>

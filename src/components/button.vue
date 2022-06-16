@@ -64,6 +64,7 @@ export default {
 
 <style lang="stylus">
 .vat-button {
+  margin:0px 15px
   display: inline-block;
   line-height: 1;
   white-space: nowrap;
@@ -75,7 +76,6 @@ export default {
   text-align: center;
   box-sizing: border-box;
   outline: nvat;
-  margin: 0;
   transition: 0.1s;
   font-weight: 500;
   // 禁止元素的文字被选中
